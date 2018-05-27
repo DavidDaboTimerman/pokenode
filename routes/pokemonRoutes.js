@@ -1,6 +1,6 @@
 const express = require('express');
-const Pokemon = require('./libs/pokemonLib');
-const wrap    = require('./libs/wrap');
+const Pokemon = require('../libs/pokemonLib');
+const wrap    = require('../libs/wrap');
 
 const router = express.Router();
 

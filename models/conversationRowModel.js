@@ -1,6 +1,9 @@
 const mongoose = require('../libs/dbConnection');
 
 const conversationRowSchema = mongoose.Schema({
+  conversationName: {
+    type: String,
+  },
   text: {
     type  : String,
     unique: true,

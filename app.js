@@ -1,6 +1,7 @@
 const express       = require('express');
 const bodyParser    = require('body-parser');
-const pokemonRoutes = require('./pokemonRoutes');
+const pokemonRoutes = require('./routes/pokemonRoutes');
+const conversationRoutes = require('./routes/conversationRoutes');
 
 const app = express();
 
@@ -8,6 +9,9 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use('/pokemon', pokemonRoutes);
+
+
+app.use('/conversation', conversationRoutes);
 
 app.use('/', (req, res) => {
   res.send('api up');
