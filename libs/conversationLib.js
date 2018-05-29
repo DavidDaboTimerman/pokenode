@@ -1,10 +1,11 @@
 const Conversation = require('../models/conversationRowModel');
 
-const getConversation = (req) => {
-
-  return Conversation.find( { name: req.params.name } ) 
+const getConversationRow = (req) => {
+  const where = req.params;
+  return Conversation.findOne(where);
 };
 
 module.exports = {
-  getConversation,
+  getConversationRow,
 };
+ 

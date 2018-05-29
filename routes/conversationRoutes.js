@@ -4,6 +4,7 @@ const wrap    = require('../libs/wrap');
 
 const router = express.Router();
 
-router.get('/:name', wrap(Conversation.getConversation));
+router.get('/:conversationName', wrap(Conversation.getConversationRow));
+router.get('/:conversationName/:orderNumber', wrap(Conversation.getConversationRow));
 
 module.exports = router;
