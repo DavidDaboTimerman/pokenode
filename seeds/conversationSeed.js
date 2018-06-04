@@ -1,8 +1,8 @@
 const mongoose = require('../libs/dbConnection')
-const ConversationModel = require('../models/conversationRowModel');
-ConversationModel.collection.drop();
+const ConverationNodeModel = require('../models/conversationNodeModel');
+ConverationNodeModel.collection.drop();
 
-ConversationModel.create([{
+ConverationNodeModel.create([{
     conversationName:`first`,
     text: `hi david`,
     orderNumber:1,
